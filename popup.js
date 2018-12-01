@@ -1,4 +1,4 @@
-document.addEventListener('CopyCat', function() {
+document.addEventListener('checkPage', function() {
   var button1 = document.getElementById('checkPage'),
     content = document.getElementById('printtext').value;
   button1.onclick = function() {
