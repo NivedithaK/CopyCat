@@ -3,12 +3,7 @@
   <head>
     <title>CopyCat</title>
     
-    <script>
-      function changeText() {
-        document.getElementById("textToChange").innerHTML = document.getElementById("textToChange").innerHTML + "\n " + document.getElementById('mainTextField').value;
-      }
-      
-    </script>
+    
     
     <style>
        html, body {
@@ -63,5 +58,7 @@
       <button id="copyButton" style="display: inline-block" onclick=changeText()>Copy</button>
       <p><var id="textToChange"></var></p>
   </body>
+  <script src="popup.js">
+    </script>
   
 </html>
