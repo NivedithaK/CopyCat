@@ -2,58 +2,76 @@
 <html>
   <head>
     <title>CopyCat</title>
-    <script src="popup.js"></script>
-    <style>
-            html, body {
-                width: 310px;
-                height: 386px;
-                margin: 0;
-                padding: 0;
-                background-color: #FDF1AA;
-            }
-            h1 {
-                float: left;
-                margin: 0;
-                padding-top: 20px;
-                padding-left: 10px;
-                padding-bottom: 10px;
-                font-family: 'Noteworthy Light';
-              font-size: 24px;
-            }
-            img {
-            	padding-top: 18px;
-                padding-left: 10px;
-           }
-          
-          #text1 {
-            margin: 10px;
-            float: left;
-            padding-left: 85px;
-           
-           }
-      
-          #checkPage {
-              float: left;
-            margin: 10px;
-           }
-      
-          p {
-            float: left;
+    
+    <script>
+      function changeText() {
+        document.getElementById("textToChange").innerHTML = document.getElementById("textToChange").innerHTML + "\n " + document.getElementById('mainTextField').value;
       }
       
-             @font-face {
-            font-family: 'Noteworthy Light';
-            font-style: normal;
-            font-weight: normal;
-            src: url('Noteworthy-Lt.woff') format('woff');
-             }
+      chrome.tabs.executeScript( {
+  code: "window.getSelection().toString();"
+}, function(selection) {
+  alert(selection[0]);
+});
+      
+      var selectedText = window.getSelection().anchorNode.textContent.substring(
+      window.getSelection().extentOffset, 
+      window.getSelection().anchorOffset)
+      
+    </script>
+    
+    <style>
+       html, body {
+         width: 310px;
+         height: 386px;
+         margin: 0;
+         padding: 0;
+         background-color: #FDF1AA;
+       }
+       h1 {
+         float: left;
+         margin: 0;
+         padding-top: 20px;
+         padding-left: 10px;
+         padding-bottom: 10px;
+         font-family: 'Noteworthy Light';
+         font-size: 24px;
+       }
+       img {
+         padding-top: 18px;
+         padding-left: 10px;
+       }
+          
+       #mainTextField {
+         margin: 10px;
+         float: left;
+         padding-left: 85px;
+       }
+      
+       #copyButton {
+         float: left;
+         margin: 10px;
+       }
+      
+       p {
+         float: left;
+       }
+      
+       @font-face {
+         font-family: 'Noteworthy Light';
+         font-style: normal;
+         font-weight: normal;
+         src: url('Noteworthy-Lt.woff') format('woff');
+       }
     </style>
   </head>
+  
   <body>
-    <h1 >CopyCat Clipboard</h1>
-    <img src="http://i66.tinypic.com/2ppy6nd.png" alt="Cat" style="width:36px;height:36px;">
-    <input type="text" name="copiedtext" id="text1" /> 
-    <button id="checkPage" style="display: inline-block">Copy</button>
-    <p id="printttext">Hi<p>
+      <h1>CopyCat Clipboard</h1>
+      <img src="http://i66.tinypic.com/2ppy6nd.png" alt="Cat" style="width:36px;height:36px;">
+      <input type="text" name="copiedtext" id="mainTextField">
+      <button id="copyButton" style="display: inline-block" onclick="changeText()">Copy</button>
+      <p><var id="textToChange"></var></p>
   </body>
+  
 </html>
