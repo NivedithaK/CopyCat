@@ -8,16 +8,6 @@
         document.getElementById("textToChange").innerHTML = document.getElementById("textToChange").innerHTML + "\n " + document.getElementById('mainTextField').value;
       }
       
-      chrome.tabs.executeScript( {
-  code: "window.getSelection().toString();"
-}, function(selection) {
-  alert(selection[0]);
-});
-      
-      var selectedText = window.getSelection().anchorNode.textContent.substring(
-      window.getSelection().extentOffset, 
-      window.getSelection().anchorOffset)
-      
     </script>
     
     <style>
