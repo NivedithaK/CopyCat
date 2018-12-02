@@ -37,9 +37,22 @@
          float: left;
          margin: 10px;
        }
+
+       #copyButton2 {
+         float: left;
+         margin: 10px;
+         text-align: bottom;
+       }
+
+       #clearButton {
+         float: left;
+         margin: 10px;
+         text-align: bottom;
+       }
       
        p {
          float: left;
+         padding-right: 10px;
        }
       
        @font-face {
@@ -55,8 +68,10 @@
       <h1>CopyCat Clipboard</h1>
       <img src="http://i66.tinypic.com/2ppy6nd.png" alt="Cat" style="width:36px;height:36px;">
       <input type="text" name="copiedtext" id="mainTextField">
-      <button id="copyButton" onclick="changeText()">Copy</button>
+      <button id="copyButton">Copy</button>
       <p><var id="textToChange"></var></p>
+      <button id="copyButton2">Copy All</button>
+      <button id="clearButton">Clear</button>
   </body>
   <script src="popup.js">
     </script>
