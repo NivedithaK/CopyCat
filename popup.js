@@ -9,15 +9,15 @@ button1.onclick = () => {
 
 
 function changeText() {
-		chrome.storage.sync.get(['value'],function(result){
 
-		})
+		chrome.storage.sync.get(['value'], function(items) {
+     		 document.getElementById("textToChange").innerHTML =  document.getElementById("mainTextField").value + " <br> " + items.value;
+    	});
 
-
-        document.getElementById("textToChange").innerHTML = document.getElementById("mainTextField").value + " <br> " + document.getElementById("textToChange").innerHTML;
+		// document.getElementById("textToChange").innerHTML = chrome.storage.sync.get(['value'], function(result){});
+		// document.getElementById("textToChange").innerHTML = document.getElementById("mainTextField").value + " <br> " + document.getElementById("textToChange").innerHTML;
       	var textToSave = document.getElementById("textToChange").innerHTML;
       	chrome.storage.sync.set({'value': textToSave});
-
 
 
       }
@@ -46,6 +46,7 @@ var button3 = document.getElementById("clearButton");
 
 button3.onclick = () => {
 	clearAll();
+	chrome.storage.sync.set({'value': ""});
 }
 
 function clearAll() {
