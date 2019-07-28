@@ -5,6 +5,8 @@ to have to navigate back and forth while you copy one section at a time. CopyCat
 tries to solve that by allowing users to copy text to a local place first in any order, and then copy the new text
 with one click. 
 
+Devpost submission: https://devpost.com/software/copycat-clipboard-rugmve
+
 # Languages
 
 We used JavaScript and HTML/CSS to build this extension for Google Chrome. The icon was made with Photoshop.
