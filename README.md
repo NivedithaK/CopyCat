@@ -12,10 +12,10 @@ We used JavaScript and HTML/CSS to build this extension for Google Chrome. The i
 # Screenshots
 
 <p align="center"><img src="https://i.imgur.com/r4kBVBX.png" alt="Screenshot2"
-	title="Screenshot" width="638" height="856" /></p> 
+	title="Screenshot" width="233" height="300" /></p> 
 	
 <p align="center"><img src="https://i.imgur.com/mluqI6g.png" alt="Screenshot1"
-	title="Screenshot" width="644" height="862" /></p> 
+	title="Screenshot" width="233" height="300" /></p> 
 
 # What We Learned
 
