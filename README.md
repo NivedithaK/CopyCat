@@ -9,6 +9,10 @@ with one click.
 
 We used JavaScript and HTML/CSS to build this extension for Google Chrome. The icon was made with Photoshop.
 
+# Screenshots
+<p align="center"><img src="https://i.imgur.com/mluqI6g.png" alt="Screenshot1"
+	title="Screenshot" width="500" height="300" /></p> 
+
 # What We Learned
 
 The hardest part of building this was "saving" data when the user closes the extension window, and recalling it when
